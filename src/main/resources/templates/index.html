@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+ 
+<html>
+<head>
+	  <title>Allianz Time tracker</title>
+	  <meta charset="utf-8" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  <script src="/js/postrequest.js"></script>
+      <script src="/js/getrequest.js"></script>
+      <script src="/js/getspecificrequest.js"></script>
+</head>
+<body>
+ 
+<div class="container">
+ 
+	<h3 style="color:blue">Allianz Time Tracker</h3>
+	
+	<div class="row col-md-6">
+		<form id="PostFormDetails">
+			<div class="form-group">
+				<label for="name">Email:</label>
+				<input type="text" class="form-control" id="email" placeholder="Enter Email ID"/>
+			</div>
+			
+			<div class="form-group">
+				<label for="name">Entry Date:</label>
+				<input type="date" class="form-control" id="entrydate" placeholder="Enter date"/>
+			</div>
+			
+			
+			<div class="form-group">
+				<label for="name">Entry Time:</label>
+				<input type="time" class="form-control" id="entrytime" placeholder="Enter Time"/>
+			</div>
+			
+			<div class="form-group">
+				<label for="name">Exit Date:</label>
+				<input type="date" class="form-control" id="exitdate" placeholder="Enter date"/>
+			</div>
+			
+			
+			<div class="form-group">
+				<label for="name">Exit Time:</label>
+				<input type="time" class="form-control" id="exittime" placeholder="Enter Time"/>
+			</div>
+						
+						<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+		
+		<form id="search-form">
+            <div class="form-group">
+                <label for="name"> Search Email ID</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="specificsearchemail"/>
+                </div>
+                <button type="submit" class="btn btn-default">Search</button>
+            </div>
+            </form>
+		
+		<div id="postResultDiv" style="margin:10px 0px 10px 0px;">
+		</div>
+		
+		<div>
+		<button id="getAllEmployeeId" type="button" class="btn btn-primary" style="margin:10px 0px 10px 0px;">Get All Customers</button>
+		<div id="getResultDiv" style="margin:10px 10px 10px 15px;">
+	        <ul class="list-group">
+	    	</ul>
+    	</div>
+	</div>
+	
+	<table id="customerTable" class="table table-bordered table-hover">
+			<thead>
+				<tr>
+					<th>Email</th>
+					<th>Enter date</th>
+					<th>Enter Time</th>
+					<th>Exit Date</th>
+					<th>Exit Time</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+		
+	</div>
+</div>
+</body>
+</html>
