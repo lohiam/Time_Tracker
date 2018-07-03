@@ -2,7 +2,6 @@ $( document ).ready(function() {
 	
 	// SUBMIT FORM
     $("#PostFormDetails").submit(function(event) {
-		// Prevent the form from submitting via the browser.
 		event.preventDefault();
 		ajaxPost();
 	});
